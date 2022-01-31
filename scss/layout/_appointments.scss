@@ -1,0 +1,126 @@
+.appointments {
+    .appointment-form {
+        background-color: $primary-color;
+    }
+    img {
+        width: 100%;
+    }
+    .row > * {
+        padding-right: 0;
+        padding-left: 0;
+        margin-top: 0;
+    }
+    .row {
+        --bs-gutter-x: 0;
+    }
+
+    .form-inputs {
+        background-color: $primary-color;
+        z-index: 99;
+        .row > * {
+            padding-right: 10px;
+        }
+        ::-webkit-calendar-picker-indicator {
+            filter: invert(1);
+        }
+    }
+    .errors-div {
+        margin-top: auto;
+        margin-bottom: 0%;
+        .errors {
+            color: rgb(148, 0, 0);
+        }
+    }
+
+    .appointment-message {
+        display: none;
+    }
+    .send {
+        margin-left: 8%;
+        color: white;
+        display: block;
+        width: 130%;
+    }
+    
+
+     .form-row {
+        margin: 8% 8%;
+        margin-bottom: 0;
+        justify-content: center;
+        align-content: center;
+
+        input {
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid #fff;
+            border-radius: 0%;
+            color: #ffff;
+            height: 50px;
+            font-size: 12px;
+        }
+
+        input::-webkit-input-placeholder {
+            font-size: 12px;
+            font-family: $primary-font;
+            color: #ffffff;
+        }
+
+        select {
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid #fff;
+            border-radius: 0%;
+            color: #ffff;
+            font-size: 12px;
+            height: 50px;
+            background-color: $primary-color;
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='5' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+        }
+        .error {
+            border-bottom: 1px solid rgb(148, 0, 0);
+    }
+        
+    }
+    label {
+        padding-left: 8px;
+        margin-left: 8%;
+        font-size: 12px;
+        color: #ffff;
+    }
+
+    textarea {
+        margin-left: 8%;
+        margin-bottom: 2%;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #fff;
+        border-radius: 0%;
+        color: #ffff;
+        font-size: 12px;
+        width: 70%;
+    }
+
+    .error {
+        border-bottom: 1px solid rgb(148, 0, 0);
+}
+
+    @media all and (max-width: $break-point-xlarge) {
+        img {
+            width: 130%;
+        }
+    }
+    @media all and (max-width: $break-point-large) {
+        img {
+            width: 160%;
+        }
+    }
+    @media all and (max-width: 767px) {
+        .form-inputs {
+            min-height: 600px;
+            width: 100%;
+        }
+        .send {
+            width: 100%;
+        }
+    }
+}

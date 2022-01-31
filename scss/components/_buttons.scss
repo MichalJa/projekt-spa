@@ -1,0 +1,44 @@
+%btn {
+    border-radius: 30px;
+    display: inline-block;
+    padding: 15px 35px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 0;
+}
+
+.btn-primary {
+    @extend %btn;
+    background-color: $primary-color;
+
+    &:hover {
+        background-color: $button-hover-color;
+    }
+}
+
+.btn-secondary {
+    @extend %btn;
+    background-color: $button-hover-color;
+
+    &:hover {
+        background-color: $primary-color;
+    }
+}
+
+.btn-submit {
+    @extend %btn;
+    background-color: #fff;
+    color: $text-color-primary;
+    font-family: $primary-font;
+    font-weight: 700;
+    max-width: 50%;
+    transition: all .5s;
+    margin-left: 10%;
+    font-size: 14px;
+    text-align: center;
+
+    &:hover {
+        background-color: $button-hover-color;
+        color: white;
+    }
+}

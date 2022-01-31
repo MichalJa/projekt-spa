@@ -1,0 +1,79 @@
+%common-infobox {
+    padding: 0 10px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.infobox {
+    @extend %common-infobox;
+
+    .infobox-inner {
+        border: 1px solid #e2e5ea;
+        padding: 25px;
+        border-radius: 2px;
+        position: relative;
+        &:hover {
+            box-shadow: 0 5px 20px #f0f0f0;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        p {
+            font-weight: 300;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.infobox-team {
+    @extend %common-infobox;
+    margin-top: 60px;
+    position: relative;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+    }
+    .team-socials {
+        transition: all .3s;
+        a {
+            height: 35px;
+            width: 35px;
+            font-size: 20px;
+            color: $text-color-primary;
+            border: 1px solid $text-color-primary;
+            border-radius: 50%;
+            display: inline-block;
+            line-height: 35px;
+            text-align: center;
+            margin: 0 10px;
+
+            &:hover {
+                border: 1px solid $primary-color;
+                color: white;
+                background-color: $primary-color;
+                box-shadow: 0 5px 20px #f0f0f0;
+            }
+        }
+    }
+    
+    .infobox-team-caption {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 80%;
+        bottom: -50px;
+        background-color: #ffff;
+        transition: all .3s;
+
+        &:hover {
+            box-shadow: 0 5px 20px #f0f0f0;
+            padding-bottom: 10px;
+            bottom: 0;
+        }
+    }
+    
+}

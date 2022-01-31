@@ -1,0 +1,139 @@
+.main-header {
+    height: 600px;
+    @include flexbox;
+    @include flex-align(flex-start, center);
+    position: relative;
+
+    .container {
+        z-index: 1;
+    }
+
+    .header-bg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        max-width: 30%;
+        z-index: 9999;
+        display: none;
+    }
+    .header-flowers {
+        max-width: 11%;
+        position: absolute;
+        left: 0;
+        top: 35%;
+    }
+
+    .header-description {
+        color: $text-color-primary;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-family: $secondary-font;
+        font-weight: 700;
+    }
+
+    h1 {
+        color: #1e2528;
+        font-size: 50px;
+    }
+
+    .main-header-content {
+        color: $text-color-paragraphs-head;
+    }
+
+    .buttons-panel {
+        margin-top: 40px;
+
+        .reserve {
+            display: inline-block;
+            padding: 14px 20px;
+            color: #fff;
+            background-color: $primary-color;
+            text-decoration: none;
+
+            &:hover {
+                background-color: $button-hover-color;
+            }
+        }
+
+        .watch {
+            color: $text-color-primary;
+            display: inline-block;
+            margin-left: 15px;
+            text-decoration: none;
+
+            i {
+                height: 40px;
+                width: 40px;
+                text-align: center;
+                line-height: 38px;
+                border: 1px solid $text-color-primary;
+                border-radius: 50%;
+                transition: all 0.3s;
+            }
+
+            &:hover {
+                color: $primary-color;
+                i {
+                    border: 1px solid $primary-color;
+                }
+            }
+        }
+    }
+
+    @media all and (min-width: $break-point-large) {
+        .container {
+            margin-left: 15%;
+        }
+
+        .main-header-holder {
+            width: 50%;
+        }
+
+        .header-bg {
+            display: block;
+        }
+
+    }
+
+    @media all and (min-width: $break-point-xlarge) {
+        .header-bg {
+            max-width: 40%;
+        }
+    }
+
+    @media all and (max-width: $break-point-xsmall) {
+        .buttons-panel {
+            .reserve,
+            .watch {
+                margin: 0;
+            }
+        }
+    }
+
+    @media all and (min-width: 1400px)
+    {
+        height: 700px;
+    }
+
+    @media all and (min-width: 1800px)
+    {
+        height: 800px;
+    }
+
+
+    @media all and (min-width: $break-point-super-large)
+    {
+        height: 900px;
+    }
+
+    @media all and (max-width: $break-point-large) {
+        p {
+            margin-left: 7%;
+        }
+    }
+    @media all and (max-width: 730px) {
+        p {
+            margin-left: 0%;
+        }
+    }
+}
